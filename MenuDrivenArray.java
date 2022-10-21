@@ -44,8 +44,8 @@ public class MenuDrivenArray {
                             min = a[i];
                         }
                     }
-                    System.out.println("Maximum element is" + max);
-                    System.out.println("Maximum element is" + min);
+                    System.out.println("Maximum element is " + max);
+                    System.out.println("Minimum element is " + min);
                     System.out.println("----------------------------------------");
                     break;
 
@@ -54,7 +54,7 @@ public class MenuDrivenArray {
                     for (int i = 0; i < size; i++) {
                         sum = sum + a[i];
                     }
-                    System.out.println("Addition of array elements is" + sum);
+                    System.out.println("Addition of array elements is " + sum);
                     System.out.println("----------------------------------------");
                     break;
 
@@ -73,7 +73,7 @@ public class MenuDrivenArray {
 
                 case 5:
                     count = 0;
-                    System.out.print("Even Numbes in the array are ");
+                    System.out.print("Even Numbers in the array are\n");
                     for (int i = 0; i < size; i++) {
                         if (a[i] % 2 == 0) {
                             count++;
@@ -99,7 +99,6 @@ public class MenuDrivenArray {
                         }
                     }
 
-                    System.out.println("No perefct number exist");
                     System.out.println("----------------------------------------");
                     break;
 
@@ -156,26 +155,22 @@ public class MenuDrivenArray {
                     break;
 
                 case 10:
-                    for (int i = 0; i < size; i++) {
-
-                        int t;
+                    for (int i = 0; i < a.length; i++) {
+                        sum = 0;
+                        int fact = 1;
+                        int j = 1;
                         int temp = a[i];
-                        t = a[i];
-                        int sum2 = 0;
-                        int r;
-                        while (t > 0) {
-                            r = t % 10;
-                            int fact = 1;
-                            for (int j = 1; j < r; j++) {
-                                fact = fact * j;
-                            }
-
-                            sum2 = sum2 + fact;
-                            t = t / 10;
-                            if (sum2 == temp) {
-                                System.out.println("Strong number is " + temp);
-                            }
+                        int r = temp % 10;
+                        while (i <= r) {
+                            fact = fact * i;
+                            i++;
                         }
+                        sum = sum + fact;
+                        temp = temp / 10;
+                        if (a[i] == sum) {
+                            System.out.println("\n" + a[i] + " is a Strong Number");
+                        }
+
                     }
                     System.out.println("----------------------------------------");
                     break;
@@ -199,7 +194,8 @@ public class MenuDrivenArray {
 
                 case 12:
                     for (int i = 0; i < a.length / 2; i++) {
-                        int temp = a[i];
+                        int temp = 0;
+                        temp = a[i];
                         a[i] = a[a.length - 1 - i];
                         a[a.length - 1 - i] = temp;
                     }
@@ -217,14 +213,12 @@ public class MenuDrivenArray {
                     int found = 0;
                     for (int i = 0; i < size; i++) {
                         if (a[i] == val) {
-                            System.out.println("Element found at index" + i);
+                            System.out.println("Element found at index " + i);
                             found = 1;
                             break;
+                        } else {
+                            System.out.println("Element not found");
                         }
-
-                    }
-                    if (found == 0) {
-                        System.out.println("Element not found");
                     }
                     System.out.println("----------------------------------------");
                     break;
