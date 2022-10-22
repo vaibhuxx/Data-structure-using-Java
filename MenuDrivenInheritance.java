@@ -4,23 +4,27 @@ public class MenuDivenInheritance {
     public static void main(String args[]) {
 
         class A {
+            //case 1
             public void objA() {
                 System.out.println(
                         "Object Created");
             }
         }
         class B {
+            //case 2
             public B() {
                 System.out.println(
                         "Constructor Created");
             }
         }
         class C {
+            //case 3
             public C() {
                 System.out.println("Parent Created using Constructor");
             }
         }
         class D extends C {
+            //case 4
             public D() {
                 System.out.println(
                         " First Child is created using Single Inheritance");
@@ -34,6 +38,7 @@ public class MenuDivenInheritance {
         }
         class E extends C {
             public E() {
+                //case 5
                 System.out.println(
                         " Second Child Created using Hierarchical Inheritance");
             }
@@ -41,6 +46,7 @@ public class MenuDivenInheritance {
 
         class F extends X {
             public F() {
+                //case 6
                 System.out.println(
                         " Third Child created using Multilevel Inheritance");
             }
